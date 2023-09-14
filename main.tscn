@@ -1,0 +1,97 @@
+[gd_scene load_steps=4 format=3 uid="uid://b26djd1agid12"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_elnjd"]
+[ext_resource type="Texture2D" uid="uid://dqjq2hb0x83dj" path="res://mattiMedia/images/berk.png" id="2_577n0"]
+[ext_resource type="Texture2D" uid="uid://bmsqxu1y2eow0" path="res://mattiMedia/images/vampstar.png" id="2_t2w8u"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_elnjd")
+
+[node name="playButton" type="Button" parent="."]
+offset_left = 445.0
+offset_top = 268.0
+offset_right = 674.0
+offset_bottom = 403.0
+rotation = -0.190241
+tooltip_text = "play mu game :)"
+text = "play"
+
+[node name="quitButton" type="Button" parent="."]
+offset_left = 446.0
+offset_top = 437.0
+offset_right = 675.0
+offset_bottom = 572.0
+rotation = 0.190241
+tooltip_text = "BNO PLEASE NOPOOOOOO PLEAS ARE U SEURE U WANT 2 QUIT PLEASE PLAY MY GAME 😢😢😢😢"
+text = "STOP!!"
+
+[node name="mainMenuSprites" type="Node" parent="."]
+
+[node name="Title" type="Label" parent="mainMenuSprites"]
+offset_left = 510.0
+offset_top = 104.0
+offset_right = 584.0
+offset_bottom = 149.0
+tooltip_text = "                                               🟦🟦🟦.                                                    🟦🟦🟦
+                                          🟦🟦🟦🟦🟦.                                            🟦🟦🟦🟦🟦
+                                     🟦🟦🟦🟦🟦🟦🟦.                                  🟦🟦🟦🟦🟦🟦🟦
+                                 🟦🟦🟦🟦🟦🟦🟦🟦🟦.                        🟦🟦🟦🟦🟦🟦🟦🟦🟦
+                            🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦.              🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
+                        🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
+                    🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
+                    🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
+                    🟦🟦🟦🟦🟦🟦🟦⬛️⬛️⬛️⬛️🟦🟦🟦🟦🟦⬛️⬛️⬛️⬛️🟦🟦🟦🟦🟦🟦🟦
+⠀⠀⠀.           🟦🟦🟦🟦🟦🟦🟦⬛️⬛️⬛️⬛️🟦🟦🟦🟦🟦⬛️⬛️⬛️⬛️🟦🟦🟦🟦🟦🟦🟦
+⠀⠀⠀.           🟦🟦🟦🟦🟦🟦🟦⬛️⬛️⬛️⬛️🟦🟦🟦🟦🟦⬛️⬛️⬛️⬛️🟦🟦🟦🟦🟦🟦🟦
+⠀⠀⠀⠀⠀⠀⠀  🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
+⠀⠀⠀.           🟦🟦🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟦🟦
+                    🟦🟦🟦🟥🟥⬜️⬛️⬛️⬜️⬛️⬛️⬜️⬛️⬛️⬛️⬜️⬛️⬛️⬛️⬜️⬛️⬛️🟥🟥🟦🟦🟦
+                      🟦🟦🟦🟥🟥⬜️⬛️⬛️⬜️⬛️⬛️⬜️⬛️⬛️⬛️⬜️⬛️⬛️⬜️⬛️🟥🟥🟦🟦🟦🟦
+                           🟦🟦🟦🟥🟥⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️🟥🟥🟦🟦🟦🟦
+                               🟦🟦🟦🟥🟥⬛️⬛️⬛️⬜️⬛️⬜️⬛️⬜️⬛️⬛️⬛️🟥🟥🟦🟦🟦🟦
+                                    🟦🟦🟦🟥🟥⬛️⬛️⬜️⬛️⬜️⬛️⬜️⬛️⬛️🟥🟥🟦🟦🟦🟦
+                                         🟦🟦🟦🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟦🟦🟦🟦
+                                              🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
+                                                        🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦                         "
+mouse_filter = 0
+text = "evil game
+💀💀💀"
+
+[node name="background" type="Sprite2D" parent="mainMenuSprites"]
+z_index = -1
+position = Vector2(576, 324)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_577n0")
+
+[node name="vampstars" type="Node" parent="mainMenuSprites"]
+
+[node name="vampstar" type="Sprite2D" parent="mainMenuSprites/vampstars"]
+position = Vector2(816.875, 253.689)
+scale = Vector2(0.0995441, 0.0995441)
+texture = ExtResource("2_t2w8u")
+
+[node name="vampstar2" type="Sprite2D" parent="mainMenuSprites/vampstars"]
+position = Vector2(924, 446)
+scale = Vector2(0.0995441, 0.0995441)
+texture = ExtResource("2_t2w8u")
+flip_h = true
+
+[node name="vampstar3" type="Sprite2D" parent="mainMenuSprites/vampstars"]
+position = Vector2(346, 337)
+scale = Vector2(0.0995441, 0.0995441)
+texture = ExtResource("2_t2w8u")
+flip_h = true
+
+[node name="vampstar4" type="Sprite2D" parent="mainMenuSprites/vampstars"]
+position = Vector2(146, 243)
+scale = Vector2(0.0995441, 0.0995441)
+texture = ExtResource("2_t2w8u")
+
+[node name="vampstar5" type="Sprite2D" parent="mainMenuSprites/vampstars"]
+position = Vector2(282, 503)
+scale = Vector2(0.0995441, 0.0995441)
+texture = ExtResource("2_t2w8u")
+flip_h = true
+
+[connection signal="pressed" from="playButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]
