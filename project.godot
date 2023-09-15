@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="onePieceGameSick"
-run/main_scene="res://main.tscn"
+config/name="skeletonScaryGame"
+run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
 
