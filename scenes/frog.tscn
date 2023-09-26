@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b17srdxrvtkrr"]
+[gd_scene load_steps=22 format=3 uid="uid://b17srdxrvtkrr"]
 
 [ext_resource type="Script" path="res://scenes/frog.gd" id="1_kw331"]
 [ext_resource type="Texture2D" uid="uid://m86jf7ol24de" path="res://mattiMedia/assets/sunnyLandAssets/PNG/spritesheets/enemy-deadth.png" id="1_w7f84"]
@@ -81,9 +81,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3jk7r")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 10.0,
@@ -118,7 +118,10 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bfaii"]
-radius = 225.02
+radius = 268.002
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7l5pq"]
+size = Vector2(12, 13)
 
 [node name="frog" type="CharacterBody2D"]
 script = ExtResource("1_kw331")
@@ -132,7 +135,7 @@ metadata/_edit_lock_ = true
 texture_filter = 1
 position = Vector2(0, -11)
 sprite_frames = SubResource("SpriteFrames_0rb51")
-animation = &"jump"
+animation = &"idle"
 metadata/_edit_lock_ = true
 
 [node name="playerDetection" type="Area2D" parent="."]
@@ -140,5 +143,12 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="playerDetection"]
 shape = SubResource("CircleShape2D_bfaii")
 
+[node name="playerDeath" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="playerDeath"]
+position = Vector2(0, -6.5)
+shape = SubResource("RectangleShape2D_7l5pq")
+
 [connection signal="body_entered" from="playerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="playerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="playerDeath" to="." method="_on_player_death_body_entered"]

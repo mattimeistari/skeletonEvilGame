@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://csg5sg3ts411u"]
+[gd_scene load_steps=14 format=3 uid="uid://csg5sg3ts411u"]
 
 [ext_resource type="PackedScene" uid="uid://b030k7r652llu" path="res://player/player.tscn" id="1_bxo0l"]
 [ext_resource type="Script" path="res://caveBg.gd" id="1_svjvi"]
@@ -4463,6 +4463,21 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_3fkvh")
 sources/1 = SubResource("TileSetAtlasSource_005fy")
 
+[sub_resource type="GDScript" id="GDScript_qvhvf"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	text = \"lifeforce; \" + str(get_node(\"../../player/player\").health)
+	# 1:10:03
+"
+
 [node name="world" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -4484,6 +4499,7 @@ motion_mirroring = Vector2(1152, 0)
 position = Vector2(576, 324)
 scale = Vector2(1.2, 1.35)
 texture = ExtResource("2_4y4fg")
+metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="caveBg"]
 position = Vector2(0, 90)
@@ -4494,6 +4510,7 @@ motion_mirroring = Vector2(1152, 0)
 position = Vector2(576, 324)
 scale = Vector2(1.2, 1.35)
 texture = ExtResource("3_q6cq3")
+metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="caveBg"]
 position = Vector2(0, 90)
@@ -4504,6 +4521,7 @@ motion_mirroring = Vector2(1152, 0)
 position = Vector2(576, 324)
 scale = Vector2(1.2, 1.35)
 texture = ExtResource("4_yrhxm")
+metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="caveBg"]
 motion_scale = Vector2(0.2, 1)
@@ -4513,6 +4531,7 @@ motion_mirroring = Vector2(1152, 0)
 position = Vector2(576, 324)
 scale = Vector2(1.2, 1.35)
 texture = ExtResource("5_pymfi")
+metadata/_edit_lock_ = true
 
 [node name="player" type="Node2D" parent="."]
 
@@ -4523,3 +4542,14 @@ position = Vector2(293, 479)
 
 [node name="frog" parent="mobs" instance=ExtResource("9_5p7hk")]
 position = Vector2(824, 443)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="hp" type="Label" parent="UI"]
+offset_left = 100.0
+offset_top = 302.0
+offset_right = 140.0
+offset_bottom = 325.0
+theme_override_colors/font_color = Color(0.835294, 0.760784, 0.741176, 1)
+theme_override_font_sizes/font_size = 16
+script = SubResource("GDScript_qvhvf")
