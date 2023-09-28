@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://c17h07ki4q4v4"]
+
+[ext_resource type="Texture2D" uid="uid://to5prklrvr57" path="res://mattiMedia/assets/dungeonAssets/Character_animation/monsters_idle/skull/v2/skull_v2_1.png" id="1_xa5nd"]
+[ext_resource type="Texture2D" uid="uid://1fsvilb3uwoa" path="res://mattiMedia/assets/dungeonAssets/Character_animation/monsters_idle/skull/v2/skull_v2_2.png" id="2_kwlxe"]
+[ext_resource type="Texture2D" uid="uid://bn6f50vnih6f2" path="res://mattiMedia/assets/dungeonAssets/Character_animation/monsters_idle/skull/v2/skull_v2_3.png" id="3_lydhj"]
+[ext_resource type="Texture2D" uid="uid://bujnlo4aigy77" path="res://mattiMedia/assets/dungeonAssets/Character_animation/monsters_idle/skull/v2/skull_v2_4.png" id="4_jdkg5"]
+
+[sub_resource type="GDScript" id="GDScript_vjad6"]
+script/source = "extends Area2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4na2i"]
+radius = 6.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gluns"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xa5nd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kwlxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lydhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jdkg5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="soul" type="Area2D"]
+script = SubResource("GDScript_vjad6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4na2i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_gluns")
+animation = &"idle"
+frame = 1
+frame_progress = 0.354149
